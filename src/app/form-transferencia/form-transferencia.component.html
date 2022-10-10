@@ -1,0 +1,109 @@
+<div layout="column" layout-fill>
+  <div align="left" layout="row" layout-align="left left">
+
+    <mat-card class="info-card mat-elevation-z8" flex="80" style="margin-top: 60px;width: 800px;;">
+
+      <mat-card-title>Transferencias</mat-card-title>
+
+      <mat-card-content fxLayout="column" fxLayoutAlign="stretch">
+        <form fxLayout="column" fxLayoutAlign="start stretch">
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start">
+            <mat-card-subtitle>Conta 1</mat-card-subtitle>
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idConta" [(ngModel)]="contaModelList[0].idConta">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="saldo" [(ngModel)]="contaModelList[0].saldo">
+            </mat-form-field>
+            <br />
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idUsuario" [(ngModel)]="contaModelList[0].usuario.idUsuario">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="Nome" [(ngModel)]="contaModelList[0].usuario.nome">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="cpf" [(ngModel)]="contaModelList[0].usuario.cpf">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="dataNascimento" [(ngModel)]="contaModelList[0].usuario.dataNascimento">
+            </mat-form-field>
+          </div>
+
+
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start">
+            <mat-card-subtitle>Conta 2</mat-card-subtitle>
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idConta" [(ngModel)]="contaModelList[1].idConta">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="saldo" [(ngModel)]="contaModelList[1].saldo">
+            </mat-form-field>
+            <br />
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idUsuario" [(ngModel)]="contaModelList[1].usuario.idUsuario">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="Nome" [(ngModel)]="contaModelList[1].usuario.nome">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="cpf" [(ngModel)]="contaModelList[1].usuario.cpf">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="dataNascimento" [(ngModel)]="contaModelList[1].usuario.dataNascimento">
+            </mat-form-field>
+          </div>
+
+
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start">
+            <mat-card-subtitle>Dados da Transferencia</mat-card-subtitle>
+            <mat-form-field fxFlex="45">
+              <input matInput type="number" class="form-control" value=""
+                placeholder="Valor" [(ngModel)]="transferir.valor">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="dataTransferencia" [(ngModel)]="transferir.dataTransferencia">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idContaOrigem" [(ngModel)]="transferir.idContaOrigem">
+            </mat-form-field>
+
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value=""
+                placeholder="idContaDestino" [(ngModel)]="transferir.idContaDestino">
+            </mat-form-field>
+          </div>
+
+          <button mat-button color="primary" type="submit" (click)="efetuaTransferencia()">
+            <mat-icon fontIcon="done"></mat-icon>Transferir
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
